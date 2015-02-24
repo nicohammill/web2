@@ -1,0 +1,138 @@
+@-webkit-keyframes frisbee-throw {
+	0% { -webkit-transform:translate(1500px, 0px); }
+	100% { -webkit-transform:translate(775px, 0px); }
+}
+
+header {
+	width:50%;
+	font-family:helvetica;
+	font-size:4.2em;
+	font-weight:bold;
+	line-height:1.2em;
+}
+
+#ground {
+	position:absolute;
+	background-color:black;
+	top:64%;
+	height:36%;
+	width:100%;
+}
+
+#sparky {
+	top:50%;
+	left:50%;
+	position:absolute;
+	transform-origin:100% 50%;
+	transition: transform 3s ease;
+}
+
+
+#tail {
+	position:absolute;
+	width:0;
+	height:0;
+	border-top:5px solid transparent;
+	border-right:40px solid silver;
+	border-bottom: 5px solid transparent;
+	transform-origin:100% 50%;
+	transition:transform 5s ease;
+}
+
+#body {
+	position:absolute;
+	top:25px;
+	z-index:-1;
+}
+
+#torso {
+	left:42px;
+	position:absolute;
+	width:100px;
+	height:40px;
+	background-color:darkgrey;
+}
+
+#legs {
+	position:absolute;
+	top:42px;
+	left:42px;
+}
+
+#back-leg {
+	position:absolute;
+	width:10px;
+	height:30px;
+	background-color:silver;
+	transform-origin:50% 0%;
+	transition: transform 1s ease;
+}
+
+#front-leg {
+	position:absolute;
+	left:90px;
+	width:10px;
+	height:30px;
+	background-color:silver;
+	transform-origin:50% 0%;
+	transition: transform 2s ease;
+}
+
+#head {
+	position:absolute;
+	left:144px;
+	transform-origin:0% 50%;
+	transition: transform 3s ease;
+}
+
+#skull {
+	position:absolute;
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	background-color:lightblue;
+	transition:background-color 3s ease;
+}
+
+#snout {
+	position:absolute;
+	top:25px;
+	width:65px;
+	height:25px;
+	border-radius:0px 50px 50px 50px;
+	background-color:silver;
+}
+
+#frisbee {
+	position:absolute;
+	top:30%;
+	width:50px;
+	height:25px;
+	border-radius:50%;
+	background-color:crimson;
+	-webkit-animation:frisbee-throw 3s ease infinite alternate;
+}
+
+#sparky:hover {
+	transform: rotate(-60deg);
+}
+
+#sparky:hover #head {
+	transform:rotate(30deg);
+}
+
+#sparky:hover #tail {
+	transform:rotate(90deg);
+}
+
+#sparky:hover #back-leg {
+	transform:rotate(45deg);
+}
+
+#sparky:hover #front-leg {
+	transform: rotate(30deg);
+}
+
+#sparky:hover #skull {
+	background-color:plum;
+}
