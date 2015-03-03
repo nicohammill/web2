@@ -17,6 +17,7 @@ for (var i=0; i<20; i++) {
 }
 
 function line(size) {
+	speed(50);
 	forward(size);
 	rotate(-130);
 	forward(size);

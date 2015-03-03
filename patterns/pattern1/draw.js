@@ -7,6 +7,7 @@ for (var i=0; i<20; i++) {
 }
 
 function pentagram(size) {
+	speed(50)
 	forward(size);
 	rotate(72);
 	forward(size);
