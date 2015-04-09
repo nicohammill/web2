@@ -54,6 +54,14 @@ table {
 	width:100%;
 }
 
+.fixed {
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+
+}
+
 p {
 	font-family:"bitter";
 	font-size:1.5em;
@@ -61,6 +69,10 @@ p {
 	width:70%;
 	margin-left:15%;
 	margin-bottom:1.6em;
+}
+
+p.fixed {
+	display:block;
 }
 
 
@@ -185,6 +197,38 @@ header {
 
 .lyric {
 	font-style:italic;
+}
+
+#pull {
+	margin-bottom:20%;
+}
+
+h6 {
+	line-height:1.5em;
+	position:absolute;
+	font-family:"open sans";
+	font-size:2em;
+	color:white;
+	text-transform:uppercase;
+	z-index: 2;
+	background-color:black;
+	padding:2%;
+}
+
+#pull1 {
+	margin-left:25%;
+	-webkit-transform: rotate(-6deg);
+}
+
+#pull2 {
+	margin-top:3%;
+	margin-left:20%;
+	-webkit-transform: rotate(4deg);
+}
+
+#pull3 {
+	margin-left:25%;
+	-webkit-transform: rotate(-4deg);
 }
 
 
