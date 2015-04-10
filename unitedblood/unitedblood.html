@@ -32,7 +32,7 @@
 	</header>
 </div>
 
-<div class="section" id="part1">
+<div class="section scroller" id="part1">
 	<p class="layer scroller">
 		<span class="lead-in">When John Joseph returned to New York, in 1981,</span> punk rock was almost dead, and he was determined to help kill it. He had grown up hard in Queens, abandoned by his father and then by his mother. (Eventually, he stopped using his last name, which was McGowan.) He wound up living in a Catholic boys&rsquo; home in the Rockaways, which in time came to seem less appealing than a life on the streets. Among the many things he found on the streets was punk, in the form of a wild concert at Max&rsquo;s Kansas City, the night club on Park Avenue South where such heroes as Sid Vicious and Johnny Thunders liked to debauch themselves. John Joseph had visited Max&rsquo;s under the influence of a sedative called Placidyl, which may explain why he can&rsquo;t remember what band was playing, and why he fared so poorly in the fistfight that followed the show. But he liked the mayhem, and he liked the punk-obsessed woman he met a few weeks later, who had a fake English accent and a real heroin addiction.
 	</p>
@@ -54,15 +54,17 @@
 	</p>
 </div>
 
-	<div class="section" id="bad-brains">
-		<h4 class="layer scroller" id="bad-brains-caption">
-			bad brains
-		</h4>
+<div class="section scroller" id="bad-brains">
+	<div class="full-page">
+	<h4 class="layer" id="bad-brains-caption">
+		bad brains
+	</h4>
 
-		<img src="bad-brains.png" class="layer" id="bad-brains-pic"/>
-	</div>	
+	<img src="bad-brains.png" class="layer" id="bad-brains-pic"/>
+	</div>
+</div>
 		
-<div class="section" id="part2">	
+<div class="section scroller" id="part2">	
 	<p class="layer scroller">
 		Unlike punk, with its half-spurious British accent, hardcore was American from the beginning, which may be one reason that it was slower to conquer a territory as un-American as New York. But by 1981, when John Joseph ran out of couches to sleep on in Washington, the city was coming around. Bad Brains had recently settled there, arriving in time to play at the last-ever Max&rsquo;s Kansas City concert; the opening act was an upstart local group called the Beastie Boys. John Joseph served for a time as a Bad Brains roadie and eventually became the lead singer of a fearsome band called Cro-Mags, which helped transform New York hardcore from a sideshow to the main event. By the end of the decade, the city had the most fertile scene in the country, and probably the most loathed.
 	</p>
@@ -74,13 +76,13 @@
 	</p>
 </div>
 
-	<div class="section" id="youth-of-today">
-		<h4 class="layer scroller" id="youth-of-today-caption">
-			youth of today
-		</h4>
+<div class="section" id="youth-of-today">
+	<h4 class="layer scroller" id="youth-of-today-caption">
+		youth of today
+	</h4>
 
-		<img src="youth-of-today.png" class="layer" id="youth-of-today-pic"/>
-	</div>	
+	<img src="youth-of-today.png" class="layer" id="youth-of-today-pic"/>
+</div>
 		
 <div class="section" id="part3">	
 	<p class="layer scroller">
@@ -162,6 +164,53 @@
 
 <script>
 
+$(".scroller").scrollFlight();
+
+
+$("#part2").on("arriving",function(e) {
+    lockScroll();
+    $("#bad-brains").show().focus();
+});
+
+$("#bad-brains").on("scroll",function(e) {
+    if($(this).is(":visible")) { 
+      if($(this).scrollTop() > $(window).height() * 4) {
+        $("#bad-brains").hide();
+        unlockScroll();
+      }
+    }
+ });
+
+
+function lockScroll(){
+    $html = $('html'); 
+    $body = $('body'); 
+    var initWidth = $body.outerWidth();
+    var initHeight = $body.outerHeight();
+
+    var scrollPosition = [
+        self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+        self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
+    ];
+    $html.data('scroll-position', scrollPosition);
+    $html.data('previous-overflow', $html.css('overflow'));
+    $html.css('overflow', 'hidden');
+    window.scrollTo(scrollPosition[0], scrollPosition[1]);   
+
+    var marginR = $body.outerWidth()-initWidth;
+    var marginB = $body.outerHeight()-initHeight; 
+    $body.css({'margin-right': marginR,'margin-bottom': marginB});
+} 
+
+function unlockScroll(){
+    $html = $('html');
+    $body = $('body');
+    $html.css('overflow', $html.data('previous-overflow'));
+    var scrollPosition = $html.data('scroll-position');
+    window.scrollTo(scrollPosition[0], scrollPosition[1]);    
+
+    $body.css({'margin-right': 0, 'margin-bottom': 0});
+}
 
 </script>
 

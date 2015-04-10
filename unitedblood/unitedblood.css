@@ -49,18 +49,13 @@ table {
 
 /* END OF RESET - Start of Your CSS*/
 
+
+
 .section {
 	position:relative;
 	width:100%;
 }
 
-.fixed {
-	position:fixed;
-	top:0;
-	left:0;
-	right:0;
-
-}
 
 p {
 	font-family:"bitter";
@@ -69,10 +64,6 @@ p {
 	width:70%;
 	margin-left:15%;
 	margin-bottom:1.6em;
-}
-
-p.fixed {
-	display:block;
 }
 
 
@@ -141,13 +132,20 @@ header {
 }
 
 #bad-brains {
-	margin-left:5%;
-	width:85%;
+	position:relative;
+	top:0px;
+  	left:0px;
+  	position: fixed;
+  	height:100vh;
+  	width:100%;
+  	overflow-y:scroll;
+  	z-index:2;
+  	display:none;
 }
 
 #bad-brains-caption {
 	margin-left:75%;
-	margin-top:115%;
+	margin-top:175%;
 	-webkit-transform: rotate(-7deg);
 
 }
