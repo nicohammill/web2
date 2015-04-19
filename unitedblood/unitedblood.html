@@ -6,13 +6,15 @@
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <link rel="stylesheet" href="unitedblood.css" type="text/css" media="screen" />
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Bitter:400,400italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'/>
+  <link href='http://fonts.googleapis.com/css?family=Bitter:400,400italic' rel='stylesheet' type='text/css'/>
   <script src='https://code.jquery.com/jquery-2.1.3.js'></script>
   <script src='http://cykod.github.io/ScrollFlight/scroll_flight.js'></script>
 </head>
 
 <body>
+
+  <img src="paper.jpg" class="background-image" />		
 
 <div>
 	<header class="section">
@@ -54,7 +56,7 @@
 	</p>
 </div>
 
-<div class="section scroller" id="bad-brains">
+<div class="bad-brains section scroller">
 	<div class="full-page">
 	<h4 class="layer" id="bad-brains-caption">
 		bad brains
@@ -64,8 +66,9 @@
 	</div>
 </div>
 		
-<div class="section scroller" id="part2">	
-	<p class="layer scroller">
+<div class="section scroller" id="part2">
+	<img src="paper.jpg" class="section-background"/>
+	<p class="layer scroller bad-brains-trigger">
 		Unlike punk, with its half-spurious British accent, hardcore was American from the beginning, which may be one reason that it was slower to conquer a territory as un-American as New York. But by 1981, when John Joseph ran out of couches to sleep on in Washington, the city was coming around. Bad Brains had recently settled there, arriving in time to play at the last-ever Max&rsquo;s Kansas City concert; the opening act was an upstart local group called the Beastie Boys. John Joseph served for a time as a Bad Brains roadie and eventually became the lead singer of a fearsome band called Cro-Mags, which helped transform New York hardcore from a sideshow to the main event. By the end of the decade, the city had the most fertile scene in the country, and probably the most loathed.
 	</p>
 	<p class="layer scroller">		
@@ -76,15 +79,18 @@
 	</p>
 </div>
 
-<div class="section" id="youth-of-today">
+<div class="youth-of-today section scroller" id="youth-of-today">
 	<h4 class="layer scroller" id="youth-of-today-caption">
 		youth of today
 	</h4>
 
 	<img src="youth-of-today.png" class="layer" id="youth-of-today-pic"/>
 </div>
+<div class="yot-space scroller">
+</div>
 		
-<div class="section" id="part3">	
+<div class="section" id="part3">
+	<img src="paper.jpg" class="section-background"/>	
 	<p class="layer scroller">
 		<span class="lead-in">The first wave of New York hardcore</span> didn&rsquo;t last long. Many of the East Village squats and clubhouses were shut down, and some concerts moved to CBGB, the old punk club, which realized that it could bring in extra income with all-ages hardcore shows in the afternoons. Of those early bands, the only one to find huge success was the Beastie Boys, who in the course of a few years evolved into one of the most popular hip-hop groups of all time. Agnostic Front&rsquo;s second album was a polarizing experiment, fusing hardcore with the cleaner, brighter sound of thrash metal. And Cro-Mags never recorded another album with the &ldquo;Age of Quarrel&rdquo; lineup. (In 2012, after Flanagan was ejected from the band, he turned up at a reunion show and stabbed two people. He claimed later that he was ambushed, and charges against him were dropped.)
 	</p>
@@ -101,7 +107,7 @@
 	<p class="layer scroller">	
 		Cappo was close-shaved, but he wasn&rsquo;t a skinhead. The youth crew he led favored what one band member calls &ldquo;suburban imported fashion&rdquo;: Nikes, hooded Champion sweatshirts, varsity jackets. (This, too, was a way to be anti-antisocial, especially at a club like CBGB, where everyone else was wearing a black leather coat.) Like the earlier version of New York hardcore, this one was unapologetically male-dominated. Wendy Eager, who edited a fanzine called Guillotine, tells Rettman that she found the new scene less hospitable than the old one, which, for all its vexations, had felt like home to her. &ldquo;The whole youth crew ostracized women from hardcore,&rdquo; she says. &ldquo;They wanted to be these jock guys who got into the pit.&rdquo; Indeed, slam dancing had been transformed into something that looked suspiciously athletic, with windmilling arms, jumping kicks, and acrobatic flips from the stage into the crowd. Although the bands were committed in theory to &ldquo;positive&rdquo; thoughts and actions, they maintained the martial spirit of their predecessors: Cappo sang about the importance of &ldquo;standing hard,&rdquo; which some fans viewed as license to fight when necessary, and sometimes when not.
 	</p>	
-	<p class="layer scroller">	
+	<p class="layer scroller biscuits-trigger">	
 		Rettman&rsquo;s book spends relatively little time discussing the rise of the youth crew, and for good reason: the levelheaded revivalists produced some great records, but not as many great stories. (As far as we know, Cappo never attempted to stop a bullet with a garbage-can lid.) Instead, these clean-cut young men found a new way to be hardcore. One of the best bands was Gorilla Biscuits, from Queens, whose lyrics were plainspoken and disarmingly personal. One song, &ldquo;Things We Say,&rdquo; was about how thoughtless remarks can hurt people&rsquo;s feelings:<br />
 		<p class="layer scroller">
 		<span class="lyric">
@@ -111,12 +117,12 @@
  		        And that&rsquo;s wrong&mdash;and we know it!<br />
  		 </span>	
  		 </p>
- 	<p class="layer scroller">    
+ 	<p class="layer scroller biscuits-retrigger">    
 		It was an unlikely topic for a great hardcore song. But perhaps its startling niceness was the ultimate affront to all the punks and skinheads who tried so hard to be nasty.
 	</p>
 </div>
 
-	<div class="section" id="gorilla-biscuits">
+	<div class="section scroller" id="gorilla-biscuits">
 		<h4 class="layer scroller" id="gorilla-biscuits-caption">
 			gorilla biscuits
 		</h4>
@@ -155,7 +161,7 @@
 		</h4>
 
 		<img src="turnstile.png" class="layer" id="turnstile-pic"/>
-	</div>
+	</div> 
 
 
 
@@ -166,51 +172,96 @@
 
 $(".scroller").scrollFlight();
 
+//BAD BRAINS ANIMATION//
 
-$("#part2").on("arriving",function(e) {
+$(".bad-brains-trigger").on("arrived",function(e) {
     lockScroll();
-    $("#bad-brains").show().focus();
+    $(".bad-brains").show().focus();
 });
 
-$("#bad-brains").on("scroll",function(e) {
+$(".bad-brains").on("scroll",function(e) {
     if($(this).is(":visible")) { 
-      if($(this).scrollTop() > $(window).height() * 4) {
-        $("#bad-brains").hide();
+      if($(this).scrollTop() > $(window).height() * 3.85) {
         unlockScroll();
+        $(".bad-brains").hide();
       }
     }
  });
 
 
+//GORILLA BISCUITS ANIMATION//
+
+$(".biscuits-trigger").on("departing",function(e) {
+    $("#gorilla-biscuits").addClass("slide-in");
+});
+
+$(".biscuits-retrigger").on("rearriving",function(e) {
+    $("#gorilla-biscuits").removeClass("slide-in");
+});
+
+
+//YOUTH OF TODAY ANIMATION//
+
+$(".yot-space").on("arriving",function(e) {
+    $(".youth-of-today").addClass("yot-display");
+});
+
+$(".yot-space").on("departed",function(e) {
+    $(".youth-of-today").removeClass("yot-display");
+});
+
+$(".yot-space").on("rearriving",function(e) {
+    $(".youth-of-today").addClass("yot-display");
+});
+
+$(".yot-space").on("redeparted",function(e) {
+    $(".youth-of-today").removeClass("yot-display");
+});
+
+
+
+//scroll locking plugin//
+
 function lockScroll(){
-    $html = $('html'); 
-    $body = $('body'); 
-    var initWidth = $body.outerWidth();
-    var initHeight = $body.outerHeight();
+	$html = $('html');
+	$body = $('body');
 
-    var scrollPosition = [
-        self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
-        self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
-    ];
-    $html.data('scroll-position', scrollPosition);
-    $html.data('previous-overflow', $html.css('overflow'));
-    $html.css('overflow', 'hidden');
-    window.scrollTo(scrollPosition[0], scrollPosition[1]);   
+	if($html.data("locked") == "locked") { return; }
+	var initWidth = $body.outerWidth();
+	var initHeight = $body.outerHeight();
 
-    var marginR = $body.outerWidth()-initWidth;
-    var marginB = $body.outerHeight()-initHeight; 
-    $body.css({'margin-right': marginR,'margin-bottom': marginB});
-} 
+	var scrollPosition = [
+	self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+	self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+	];
+	$html.data('scroll-position', scrollPosition);
+	$html.data('locked',"locked");
+	$html.data('previous-overflow', $html.css('overflow'));
+	$html.css('overflow', 'hidden');
+	window.scrollTo(scrollPosition[0], scrollPosition[1]);
+
+	var marginR = $body.outerWidth()-initWidth;
+	var marginB = $body.outerHeight()-initHeight;
+	$body.css({'margin-right': marginR,'margin-bottom': marginB});
+}
 
 function unlockScroll(){
-    $html = $('html');
-    $body = $('body');
-    $html.css('overflow', $html.data('previous-overflow'));
-    var scrollPosition = $html.data('scroll-position');
-    window.scrollTo(scrollPosition[0], scrollPosition[1]);    
+	$html = $('html');
+	$body = $('body');
 
-    $body.css({'margin-right': 0, 'margin-bottom': 0});
+	if($html.data('locked') != "locked") { return; }
+
+	$html.data('locked',false);
+
+	$html.css('overflow', $html.data('previous-overflow'));
+	var scrollPosition = $html.data('scroll-position');
+	window.scrollTo(scrollPosition[0], scrollPosition[1]);
+
+	$body.css({'margin-right': 0, 'margin-bottom': 0});
 }
+
+
+
 
 </script>
 
