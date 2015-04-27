@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Collection Example</title>
+  <script src='https://code.jquery.com/jquery-2.1.3.min.js'></script>
+  <script src='http://cykod.github.io/Collection.js/packery.pkgd.min.js'></script>
+  <script src='http://cykod.github.io/Collection.js/tabletop.js'></script>
+  <script src='http://cykod.github.io/Collection.js/collection.js'></script>
+  <link type='text/css' rel='stylesheet' href='style.css' />
+</head>
+<body>
+
+<div id='filter-bar-wrapper'>
+  <div id='filter-bar'>
+    <input type='text' id='search' placeholder='search'/>
+    <button data-category=""      class='category selected' id="all-button">All Countries</button>
+    <button data-category="US"  class='category'>US</button>
+    <button data-category="Other"   class='category'>Other</button>
+  </div>
+</div>
+
+<ul class='collection'>
+ 
+
+
+</ul>
+
+<div class='overlay'></div>
+<div class='modal'></div>
+<script>
+
+
+
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::js::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+
+
+function addItem(item) {
+  var $li = $("<li>").addClass("item").addClass(item.Country);
+
+  $li.attr("data-category",item.Country);
+
+  var $p = $("<p class='sentence'>").text(item.Sentence);
+
+  $li.append($p);
+
+  $li.on("click",function(e) {
+      showModal(item);
+  });
+
+  $(".collection").append($li);
+};
+
+function addItems(data) {
+  for(var i=0;i<data.length;i++) {
+    addItem(data[i]);
+  }
+}
+
+
+function callback(data) { 
+
+  addItems(data);
+
+  var $container = $('.collection');
+  $container.packery({
+    itemSelector: '.item',
+    gutter: 10
+  });
+
+  var myCollection = $(".item").collection({
+    filters: { 
+      "title": "p",
+      "category": "[data-category]"
+    },
+
+    update: function() { 
+      $container.packery(); 
+      setTimeout(function() { $container.packery()},600);
+    },
+    hide: function($elem) { $elem.hide(); },
+    show: function($elem) { $elem.fadeIn(500); },
+  });
+
+  $(".category").on("click",function(e) {
+      var category = $(this).data("category");
+      $("#filter-bar button").removeClass("selected");
+      $(this).addClass("selected");
+      myCollection.filtered("category",category);
+  });
+
+  $("#search").on("change keyup",function(e) {
+      myCollection.filtered("title", $(this).val());
+  });
+
+  $(".overlay").on("click",function(e) {
+      hideModal();
+  });
+
+}
+
+
+  Tabletop.init( { key: "https://docs.google.com/spreadsheets/d/1-0HNqjxOHgJgv7tDsfRtVLdG_UOGmkdIdZSgCFPWOyE/pubhtml?gid=0&single=true",
+                   callback: callback,
+                   simpleSheet: true } )
+
+
+</script>
+	
+</body>
+</html>
