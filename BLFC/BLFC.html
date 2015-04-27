@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Collection Example</title>
+  <title>Bulwer-Lytton Fiction Contest</title>
   <script src='https://code.jquery.com/jquery-2.1.3.min.js'></script>
   <script src='http://cykod.github.io/Collection.js/packery.pkgd.min.js'></script>
   <script src='http://cykod.github.io/Collection.js/tabletop.js'></script>
@@ -15,14 +15,14 @@
   <div id='filter-bar'>
     <input type='text' id='search' placeholder='search'/>
     
-    <button data-category=""      class='country selected' id="all-button">All Countries</button>
-    <button data-category="US"  class='country'>US</button>
-    <button data-category="Other"   class='country'>Other</button>
+    <button data-country=""      class='country selected' id="all-button">All Countries</button>
+    <button data-country="US"  class='country'>US</button>
+    <button data-country="Other"   class='country'>Other</button>
 
-    <button data-category=""      class='award selected' id="all-button">All</button>
-    <button data-category="Winner"  class='award'>Winners</button>
-    <button data-category="Runner Up"   class='award'>Runners Up</button>
-    <button data-category="Dishonorable Mention"   class='award'>Dishonorable Mentions</button>
+    <button data-award=""      class='award selected' id="all-button">All</button>
+    <button data-award="Winner"  class='award'>Winners</button>
+    <button data-award="Runner Up"   class='award'>Runners Up</button>
+    <button data-award="Dishonorable Mention"   class='award'>Dishonorable Mentions</button>
 
   </div>
 </div>
@@ -46,7 +46,8 @@
 function addItem(item) {
   var $li = $("<li>").addClass("item").addClass(item.Country).addClass(item.Award);
 
-  $li.attr("data-category",item.Country,item.Award);
+  $li.attr("data-country",item.Country);
+  $li.attr("data-award",item.Award);
 
   var $p = $("<p class='sentence'>").text(item.Sentence);
 
@@ -79,8 +80,8 @@ function callback(data) {
   var myCollection = $(".item").collection({
     filters: { 
       "title": "p",
-      "country": "[data-category]"
-      "award": "[data-category]"
+      "country": "[data-country]",
+      "award": "[data-award]"
     },
 
     update: function() { 
@@ -109,9 +110,6 @@ function callback(data) {
       myCollection.filtered("title", $(this).val());
   });
 
-  $(".overlay").on("click",function(e) {
-      hideModal();
-  });
 
 }
 
@@ -122,6 +120,6 @@ function callback(data) {
 
 
 </script>
-	
+  
 </body>
 </html>
