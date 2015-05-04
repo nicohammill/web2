@@ -7,27 +7,87 @@
   <script src='http://cykod.github.io/Collection.js/packery.pkgd.min.js'></script>
   <script src='http://cykod.github.io/Collection.js/tabletop.js'></script>
   <script src='http://cykod.github.io/Collection.js/collection.js'></script>
-  <link type='text/css' rel='stylesheet' href='style.css' />
+  <link type='text/css' rel='stylesheet' href='BLFC.css' />
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:300,900' rel='BLFC.css' type='text/css'>
 </head>
 <body>
 
-<div id='filter-bar-wrapper'>
-  <div id='filter-bar'>
+<div id="nav">
+<div class="header">
+    <h1 class="main-title">
+      The Bulwer-Lytton Fiction Contest
+    </h1>
     <input type='text' id='search' placeholder='search'/>
-    
-    <button data-country=""      class='country selected' id="all-button">All Countries</button>
-    <button data-country="US"  class='country'>US</button>
-    <button data-country="Other"   class='country'>Other</button>
-
-    <button data-award=""      class='award selected' id="all-button">All</button>
-    <button data-award="Winner"  class='award'>Winners</button>
-    <button data-award="Runner Up"   class='award'>Runners Up</button>
-    <button data-award="Dishonorable Mention"   class='award'>Dishonorable Mentions</button>
-
-  </div>
 </div>
 
+<div id="filter-nav">
+    <div id="nav-item" class="year-click-nav">
+      <ul class="no-js">
+        <li>
+          <a href="#" class="clicker"><span class="nav-state">2014</span><img src="drop-icon.png" id="drop-icon" alt="drop-icon"></a>
+          <ul>
+            <li data-year="" id="filter-item" class='year selected' id="all-button"><a href="#">All</a></li>
+            <li data-year="2014" id="filter-item" class='year'><a href="#">2014</a></li>
+          </ul>
+        </li>
+      </ul>  
+    </div>
+    <div id="nav-item" class="awards-click-nav">
+      <ul class="no-js">
+        <li>
+          <a href="#" class="clicker"><span class="nav-state">All Finalists</span><img src="drop-icon.png" id="drop-icon" alt="drop-icon"></a>
+          <ul>
+            <li data-award=""      id="filter-item" class='award selected' id="all-button"><a href="#">All Finalists</a></li>
+            <li data-award="Winner"  id="filter-item" class='award'><a href="#">Winners</a></li>
+            <li data-award="Runner Up"  id="filter-item" class='award'><a href="#">Runners Up</a></li>
+            <li data-award="Dishonorable Mention"  id="filter-item" class='award'><a href="#">Dishonorable Mentions</a></li>
+          </ul>
+        </li>
+      </ul>  
+    </div>
+    <div id="nav-item" class="categories-click-nav">
+      <ul class="no-js">
+        <li>
+          <a href="#" class="clicker"><span class="nav-state">All Categories</span><img src="drop-icon.png" id="drop-icon" alt="drop-icon"></a>
+          <ul>
+            <li data-category="" id="filter-item" class='category selected' id="all-button"><a href="#">All Categories</a></li>
+            <li data-category="Grand Prize" id="filter-item" class='category'><a href="#">Grand Prize</a></li>
+            <li data-category="Grand Panjandrum's"  id="filter-item" class='category'><a href="#">Grand Panjandrum's</a></li>
+            <li data-category="Adventure"  id="filter-item" class='category'><a href="#">Adventure</a></li>
+            <li data-category="Children's Literature" id="filter-item" class='category'><a href="#">Children's Literature</a></li>
+            <li data-category="Crime" id="filter-item" class='category'><a href="#">Crime</a></li>
+            <li data-category="Fantasy" id="filter-item" class='category'><a href="#">Fantasy</a></li>
+            <li data-category="Historical Fiction" id="filter-item" class='category'><a href="#">Historical Fiction</a></li>
+            <li data-category="Purple Prose" id="filter-item" class='category'><a href="#">Purple Prose</a></li>
+            <li data-category="Romance" id="filter-item" class='category'><a href="#">Romance</a></li>
+            <li data-category="Sci-Fi" id="filter-item" class='category'><a href="#">Sci-Fi</a></li>
+            <li data-category="Vile Puns" id="filter-item" class='category'><a href="#">Vile Puns</a></li>
+            <li data-category="Western" id="filter-item" class='category'><a href="#">Western</a></li>
+            <li data-category="Miscellaneous" id="filter-item" class='category'><a href="#">Miscellaneous</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div id="nav-item" class="country-click-nav">
+      <ul class="no-js">
+        <li>
+          <a href="#" class="clicker"><span class="nav-state">All Countries</span><img src="drop-icon.png" id="drop-icon" alt="drop-icon"></a>
+          <ul>
+            <li data-country=""    id="filter-item"  class='country selected' id="all-button"><a href="#">All Countries</a></li>
+            <li data-country="US" id="filter-item" class='country'><a href="#">U.S.</a></li>
+            <li data-country="Other"  id="filter-item" class='country'><a href="#">Other</a></li>
+          </ul>
+        </li>
+      </ul>  
+    </div>
+</div>
+</div>
+
+<div id="below-nav-padding"></div>
+
+
 <ul class='collection'>
+
  
 
 
@@ -37,28 +97,69 @@
 <div class='modal'></div>
 <script>
 
+//an <li> looks like this//
+
+//<li class="item year award category country">
+//  <p id="sentence">
+//    here is the sentence
+//  </p>
+//  <div id="more-icon-wrapper">
+//    <img src='more-icon.png' id='more-icon'/>
+//  </div>
+//  <div class="description">
+//    name
+//    state
+//    category
+//    award
+//    year
+//  </div>
+//</li>
+
+
+//ask pascal about//
+//--vertically centering sentences
+//--changing filter names to what was selected
+
 
 
 
 //:::::::::::::::::::::::::::::::::::::::::::::::::js::::::::::::::::::::::::::::::::::::::::::::::::::::::://
 
+//////////filter items/////////////////
 
 function addItem(item) {
-  var $li = $("<li>").addClass("item").addClass(item.Country).addClass(item.Award);
+  var $li = $("<li>").addClass("item").addClass(item.Year).addClass(item.Award).addClass(item.Category).addClass(item.Country);
 
-  $li.attr("data-country",item.Country);
+  $li.attr("data-year",item.Year);
   $li.attr("data-award",item.Award);
+  $li.attr("data-category",item.Category);
+  $li.attr("data-country",item.Country);
 
-  var $p = $("<p class='sentence'>").text(item.Sentence);
+  var $p = $("<p id='sentence'>").text(item.Sentence);
+  var $name = $("<p id='name'>").text(item.Name);
+  var $state = $("<p id='state'>").text(item.State);
+  var $category = $("<p id='category'>").text(item.Category);
+  var $award = $("<p id='award'>").text(item.Award);
+  var $year = $("<p id='year'>").text(item.Year);
+  var $moreicon = $("<img src='more-icon.png' id='more-icon'/>");
+  var $moreiconwrapper = $("<div id='more-icon-wrapper'>").append($moreicon);
+  var $description = $("<div class='description'>").append($name).append($state).append($award).append($category).append($year);
 
-  $li.append($p);
+  $li.append($description).append($moreiconwrapper).append($p);
 
   $li.on("click",function(e) {
       showModal(item);
   });
 
+//description reveal//
+    $moreiconwrapper.on("click",function(e) {
+    $description.toggleClass("slide-in");
+});
+//------------------//
+
   $(".collection").append($li);
 };
+
 
 function addItems(data) {
   for(var i=0;i<data.length;i++) {
@@ -66,6 +167,11 @@ function addItems(data) {
   }
 }
 
+//////////////////////////////////////////////
+
+
+
+/////////////////packery/////////////////////
 
 function callback(data) { 
 
@@ -80,8 +186,10 @@ function callback(data) {
   var myCollection = $(".item").collection({
     filters: { 
       "title": "p",
-      "country": "[data-country]",
-      "award": "[data-award]"
+      "year": "[data-year]",
+      "award": "[data-award]",
+      "category": "[data-category]",
+      "country": "[data-country]"
     },
 
     update: function() { 
@@ -92,34 +200,124 @@ function callback(data) {
     show: function($elem) { $elem.fadeIn(500); },
   });
 
-  $(".country").on("click",function(e) {
-      var country = $(this).data("country");
+  $("#search").on("change keyup",function(e) {
+      myCollection.filtered("title", $(this).val());
+  });
+
+  $(".year").on("click",function(e) {
+      var year = $(this).data("year");
       $("#filter-bar button").removeClass("selected");
       $(this).addClass("selected");
-      myCollection.filtered("country",country);
-  });
+      myCollection.filtered("year",year);
+      $(".year-click-nav .nav-state").text($(this).text());
+    });
 
   $(".award").on("click",function(e) {
       var award = $(this).data("award");
       $("#filter-bar button").removeClass("selected");
       $(this).addClass("selected");
       myCollection.filtered("award",award);
-  });  
-
-  $("#search").on("change keyup",function(e) {
-      myCollection.filtered("title", $(this).val());
+      $(".awards-click-nav .nav-state").text($(this).text());
   });
 
+  $(".category").on("click",function(e) {
+      var category = $(this).data("category");
+      $("#filter-bar button").removeClass("selected");
+      $(this).addClass("selected");
+      myCollection.filtered("category",category);
+      $(".categories-click-nav .nav-state").text($(this).text());
+  });       
 
+  $(".country").on("click",function(e) {
+      var country = $(this).data("country");
+      $("#filter-bar button").removeClass("selected");
+      $(this).addClass("selected");
+      myCollection.filtered("country",country);
+      $(".country-click-nav .nav-state").text($(this).text());
+  }); 
 }
 
+//////////////////////////////////////////////////////////////
+
+
+///////////////////google spreadsheet link///////////////////
 
   Tabletop.init( { key: "https://docs.google.com/spreadsheets/d/1-0HNqjxOHgJgv7tDsfRtVLdG_UOGmkdIdZSgCFPWOyE/pubhtml?gid=0&single=true",
                    callback: callback,
                    simpleSheet: true } )
 
+/////////////////////////////////////////////////////////////
+
+
+////////////////////Clickable Dropdowns///////////////////////
+
+  $(function() {
+      $('.year-click-nav > ul').toggleClass('no-js js');
+      $('.year-click-nav .js ul').hide();
+      $('.year-click-nav .js').click(function(e) {
+        $('.year-click-nav .js ul').slideToggle(200);
+        $('.clicker').toggleClass('active');
+        e.stopPropagation();
+      });
+      $(document).click(function() {
+        if ($('.year-click-nav .js ul').is(':visible')) {
+          $('.year-click-nav .js ul', this).slideUp();
+          $('.clicker').removeClass('active');
+        }
+      });
+    });
+
+  $(function() {
+      $('.awards-click-nav > ul').toggleClass('no-js js');
+      $('.awards-click-nav .js ul').hide();
+      $('.awards-click-nav .js').click(function(e) {
+        $('.awards-click-nav .js ul').slideToggle(200);
+        $('.clicker').toggleClass('active');
+        e.stopPropagation();
+      });
+      $(document).click(function() {
+        if ($('.awards-click-nav .js ul').is(':visible')) {
+          $('.awards-click-nav .js ul', this).slideUp();
+          $('.clicker').removeClass('active');
+        }
+      });
+    });
+
+  $(function() {
+      $('.categories-click-nav > ul').toggleClass('no-js js');
+      $('.categories-click-nav .js ul').hide();
+      $('.categories-click-nav .js').click(function(e) {
+        $('.categories-click-nav .js ul').slideToggle(200);
+        $('.clicker').toggleClass('active');
+        e.stopPropagation();
+      });
+      $(document).click(function() {
+        if ($('.categories-click-nav .js ul').is(':visible')) {
+          $('.categories-click-nav .js ul', this).slideUp();
+          $('.clicker').removeClass('active');
+        }
+      });
+    });
+
+  $(function() {
+      $('.country-click-nav > ul').toggleClass('no-js js');
+      $('.country-click-nav .js ul').hide();
+      $('.country-click-nav .js').click(function(e) {
+        $('.country-click-nav .js ul').slideToggle(200);
+        $('.clicker').toggleClass('active');
+        e.stopPropagation();
+      });
+      $(document).click(function() {
+        if ($('.country-click-nav .js ul').is(':visible')) {
+          $('.country-click-nav .js ul', this).slideUp();
+          $('.clicker').removeClass('active');
+        }
+      });
+    });
+
+//////////////////////////////////////////////////////////////
+
 
 </script>
-  
 </body>
 </html>

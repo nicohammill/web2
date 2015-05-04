@@ -1,0 +1,249 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END OF RESET - Start of Your CSS*/
+
+body {
+	width:100%;
+}
+
+#nav {
+	width:100%;
+	position:fixed;
+	z-index:2;
+	text-decoration: none;
+}
+
+
+.header {
+	position:relative;
+	width:100%;
+	height:60px;
+	background-color:rgb(51,204,112);
+	border-bottom: 1px solid rgb(242,242,242);
+
+}
+
+.main-title {
+	float:left;
+	margin:1%;
+	font-size:2em;
+	font-family:'Merriweather';
+	font-weight:700;
+}
+
+#search {
+	float:right;
+	height:45%;
+	width:35%;
+	margin:1%;
+	font-size:1em;
+	font-family:'Merriweather';
+	font-weight:300;
+	padding-left:.5%;
+	background-color:rgb(242,242,242);
+}
+
+#filter-nav {
+	position:relative;
+	width:100%;
+	height:60px;
+	font-family:'Merriweather';
+	font-weight:700;
+}
+
+#nav-item {
+	float:left;
+	height:60px;
+}
+
+a {
+	text-decoration:none;
+	color:rgb(242,242,242);
+}
+
+.clicker {
+	float:left;
+	width:95%;
+	padding-top:17px;
+	padding-bottom:17px;
+	font-size:1.5em;
+	padding-left:5%;
+	text-decoration: none;
+	color:rgb(242,242,242);
+}
+
+#filter-item {
+	float:left;
+	width:95%;
+	font-size:1.5em;
+	padding-top:2%;
+	padding-bottom:2%;
+	padding-left:5%;
+	border-top: 1px solid white;
+	background-color:rgb(38,153,84);
+	text-decoration: none;
+}
+
+.year-click-nav {
+	width:14.75%;
+	border-right: 1px solid rgb(242,242,242);
+	background-color:rgb(38,153,84);
+}
+
+.awards-click-nav {
+	width:30%;
+	border-right: 1px solid rgb(242,242,242);
+	background-color:rgb(38,153,84);
+}
+
+.categories-click-nav {
+	width:30%;
+	border-right: 1px solid rgb(242,242,242);
+	background-color:rgb(38,153,84);
+}
+
+.country-click-nav {
+	width:25%;
+	background-color:rgb(38,153,84);
+}
+
+#drop-icon {
+	width:1em;
+	float:right;
+	padding-right:5%;
+}
+
+#below-nav-padding {
+	position:relative;
+	width:100%;
+	height:121px;
+}
+
+.item {
+	position:relative;
+	background-color: white;
+	border-top: 1px solid rgb(229,229,229);
+	margin-bottom:-11px;
+	width:100%;
+}
+
+#sentence {
+	float:left;
+	font-size: 1.5em;
+	width:92%;
+	padding-left:3%;
+	padding-top:2%;
+	padding-bottom:2%;
+	font-family:'Merriweather';
+	font-weight:300;
+	line-height:1.3em;
+
+}
+
+#more-icon-wrapper {
+	position:relative;
+	float:left;
+	width:2.5%;
+	height:240px;
+	background-color:rgb(229,229,229);
+	z-index:1;
+	border-top: 1px solid rgb(229,229,229);
+}
+
+#more-icon {
+	width:1em;
+	position:absolute;
+	padding-top:280%;
+	padding-left:30%;
+	cursor:pointer;
+}
+
+.description {
+	position:absolute;
+	background-color:rgb(229,229,229);
+	color:rgb(38,153,84);
+	border-bottom: 1px solid rgb(229,229,229);
+	font-size:1.5em;
+	padding-top:2%;
+	padding-bottom:4%;
+	padding-left:4%;
+	width:33%;
+	height:162px;
+	text-align: left;
+	font-family:'Merriweather';
+	font-weight:700;
+	line-height:1.3em;
+	margin-left:-35%;
+	transition: transform .5s ease;
+}
+
+.slide-in {
+	transform: translate(100%,0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
